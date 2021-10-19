@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon name="person-outline"></ion-icon> Patients
+            </ion-card-subtitle>
+            <ion-card-title>{{patients.length}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon name="medkit-outline"></ion-icon> Samples
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon name="boat-outline"></ion-icon> Shipments
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon name="boat-outline"></ion-icon>  Due collection
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon name="boat-outline"></ion-icon> In Transit
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon name="checkmark-outline"></ion-icon>  Accepted
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon class="icon"  name="checkmark-done-outline"></ion-icon> Delivered
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              <ion-icon class="icon" name="close-circle-outline"></ion-icon>  Rejected
+            </ion-card-subtitle>
+            <ion-card-title>0</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

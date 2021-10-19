@@ -1,4 +1,6 @@
+import { NetworkService } from './services/network.service';
 import { Component } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private networkService: NetworkService) {
+
+  }
+
 }

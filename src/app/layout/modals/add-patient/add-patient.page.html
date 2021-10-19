@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>Add Patient</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="start" name="close"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label position="floating">First name</ion-label>
+      <ion-input formControlName="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last name</ion-label>
+      <ion-input formControlName="lastName"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">DOB</ion-label>
+      <ion-datetime formControlName="dob" displayFormat="MM/DD/YYYY" [max]="maxDatePicker"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select formControlName="gender" value="female" placeholder="Select Gender">
+        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option value="male">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone number</ion-label>
+      <ion-input formControlName="phoneNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Client patient id</ion-label>
+      <ion-input formControlName="clientPatientId"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cohort number</ion-label>
+      <ion-input formControlName="cohortNumber"></ion-input>
+    </ion-item>
+
+
+    <div class="actions">
+      <ion-button [disabled]="form.invalid || isSaving" (click)="save()" shape="round">
+        save
+      </ion-button>
+      <ion-button [disabled]="form.invalid || isSaving" (click)="save()" shape="round">
+        save & add sample
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

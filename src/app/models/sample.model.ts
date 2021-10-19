@@ -1,0 +1,32 @@
+export interface Sample {
+  id?: string;
+  appId: string;
+  clientSampleId: string;
+  clientPatientId: string;
+  labId: string;
+  clientId: string;
+  sampleType: string;
+  testId: string;
+  dateCollected: Date;
+  collectedBy: string;
+  status: string;
+  comment: string;
+  synced: boolean;
+  dateSynced: Date;
+  labReferenceId: string;
+  location: string;
+  result: string;
+  resultReceivedBy: string;
+  shipmentId: string;
+  clientContact: string;
+  temperatureAtHub: string;
+  temperatureAtLab: string;
+  isModifiedByHub: boolean;
+  isModifiedByFacility: boolean;
+  isModifiedByLaboratory: boolean;
+  isModifiedByCourier: boolean;
+  createdBy: string;
+  createdDate: Date;
+  lastModifiedBy: string;
+  lastModifiedDate: Date;
+}

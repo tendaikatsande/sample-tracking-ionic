@@ -1,0 +1,21 @@
+
+    <ion-item  class="ion-no-border patient-card" lines="none" >
+      <ion-avatar slot="start">
+        <img src="./../../../../assets/icons/patient.png">
+      </ion-avatar>
+      <ion-label >
+        <h2>{{patient?.firstName}} {{patient?.lastName}}</h2>
+        <h3>DOB : {{patient?.dob | date}}</h3>
+        <p> ID &nbsp; : {{patient?.clientPatientId}}</p>
+
+        <div [hidden]="actionsHidden" >
+          <ion-button shape="round" (click)="viewPatient()">
+            view patient
+          </ion-button>
+          <ion-button shape="round" (click)="addSample()">
+            add sample
+          </ion-button>
+        </div>
+      </ion-label>
+      <ion-icon name="chevron-down-outline" #action (click)="toggleActions(action)" ></ion-icon>
+    </ion-item>
